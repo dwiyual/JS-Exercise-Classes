@@ -78,9 +78,15 @@ class Car {
   fill(gallons){
     this.tank = this.tank + gallons;
   }
-  drive(distancegi)
-
-}
+  drive(distance){
+    if(this.tank = 0){
+      break;
+    }
+    else {
+    this.odometer = this.odometer + distance;
+    this.tank = this.tank - this.milesPerGallon * distance;
+  }
+};
 
 /*
   TASK 3
