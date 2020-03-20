@@ -41,9 +41,9 @@ class Airplane {
 */
 
 class Person {
-  constructor(name, age) {
-    this.name = name;
-    this.age = age;
+  constructor(atrr) {
+    this.name = atrr.name;
+    this.age = atrr.age;
     this.stomach = [];
   }
   eat(someFood){
@@ -69,9 +69,9 @@ class Person {
 */
 
 class Car {
-  constructor(model, milesPerGallon) {
-    this.model = model;
-    this.milesPerGallon = milesPerGallon;
+  constructor(atrr) {
+    this.model = atrr.model;
+    this.milesPerGallon = atrr.milesPerGallon;
     this.tank = 0;
     this.odometer = 0;
   }
@@ -101,10 +101,10 @@ class Car {
         + {name} and {location} of course come from the instance's own properties.
 */
 class Lambdasian {
-  constructor(name, age, location){
-    this.name = name;
-    this.age = age;
-    this.location = location;
+  constructor(atrr){
+    this.name = atrr.name;
+    this.age = atrr.age;
+    this.location = atrr.location;
   }
   speak() {
     `Hello my name is ${this.name}, I am from ${this.location}`;
@@ -127,8 +127,11 @@ class Lambdasian {
         + `grade` receives a `student` object and a `subject` string as arguments and returns '{student.name} receives a perfect score on {subject}'
 */
 class Instructor extends Lambdasian {
-  constructor(specialty, favLanguage, catchPhrase) {
-    super(specialty, favLanguage, catchPhrase);
+  constructor(attr) {
+    super(attr);
+    this.specialty = attr.specialty;
+    this.favLanguage = attr.favLanguage;
+    this.catchPhrase = attr.catchPhrase;
   }
   demo(subject) {
     `Today we are learning about ${subject}`;
@@ -154,8 +157,11 @@ class Instructor extends Lambdasian {
         + `sprintChallenge` similar to PRAssignment but returns `student.name has begun sprint challenge on {subject}`
 */
 class Student extends Lambdasian {
-  constructor(previousBackground, className, favSubjects){
-    super(previousBackground, className, favSubjects);
+  constructor(attr){
+    super(attr);
+    this.previousBackground = this.previousBackground;
+    this.className = this.className;
+    this.favSubjects = this.favSubjects;
   }
 
 }
