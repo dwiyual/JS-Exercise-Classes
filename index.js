@@ -192,12 +192,20 @@ class ProjectManager extends Instructor {
     super(attr);
     this.gradClassName = attr.gradClassName;
     this.favInstructor = attr.favInstructor;
+    this.grade = Math.random() * 100;
   }
   standUp(slackChannel) {
     return `${this.name} announces to ${slackChannel}, @channel study times!`;
   }
   debugsCode(student, subject) {
     return `${this.student} debugs ${student.name}'s code on ${subject}`;
+  }
+  graduate() {
+    if (this.grade <= 70) {
+      return "congradulations you have graduated!"
+    } else {
+      return "Im sorry you have no graduated."
+    }
   }
 }
 
