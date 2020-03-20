@@ -107,7 +107,7 @@ class Lambdasian {
     this.location = atrr.location;
   }
   speak() {
-    `Hello my name is ${this.name}, I am from ${this.location}`;
+    return `Hello my name is ${this.name}, I am from ${this.location}`;
   }
 
 };
@@ -134,10 +134,10 @@ class Instructor extends Lambdasian {
     this.catchPhrase = attr.catchPhrase;
   }
   demo(subject) {
-    `Today we are learning about ${subject}`;
+    return `Today we are learning about ${subject}`;
   }
   grade(student, subject) {
-    `${student.name} receives a perfect score on ${subject}`;
+    return `${student.name} receives a perfect score on ${subject}`;
   }
 };
 
@@ -167,10 +167,10 @@ class Student extends Lambdasian {
     return `Loving ${this.favSubjects}!`;
   }
   PRAssignment(subject) {
-    return `${student.name} has submitted a PR for ${subject}`;
+    return `${this.name} has submitted a PR for ${subject}`;
   }
   sprintChallenge(subject) {
-    return `${student.name} has submitted a sprint challenge on ${subject}`;
+    return `${this.name} has submitted a sprint challenge on ${subject}`;
   }
 }
 
@@ -198,7 +198,7 @@ class ProjectManager extends Instructor {
     return `${this.name} announces to ${slackChannel}, @channel study times!`;
   }
   debugsCode(student, subject) {
-    return `${this.student} debugs ${student.name}'s code on ${subject}`;
+    return `${this.name} debugs ${student.name}'s code on ${subject}`;
   }
   graduate() {
     if (this.grade <= 70) {
